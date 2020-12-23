@@ -8,6 +8,7 @@
     exit(); ?> --}}
 
     {{-- <p>{{ $image->file_name }}</p> --}}
+    <p>{{ $image->post_by }}</p>
     <p>{{ $image->file_title }}</p>
     <p>{{ $image->file_text }}</p>
 </div>

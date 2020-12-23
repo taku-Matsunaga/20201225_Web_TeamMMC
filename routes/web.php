@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,22 +21,22 @@ Route::get('/', function () {
 Route::get(
     '/form',
     [App\Http\Controllers\UploadImageController::class, "show"]
-)->name("upload_form");
+)->name("upload_form")->middleware('auth');
 
 Route::post(
     '/upload',
     [App\Http\Controllers\UploadImageController::class, "upload"]
-)->name("upload_image");
+)->name("upload_image")->middleware('auth');
 
 Route::get(
     '/list',
     [App\Http\Controllers\ImageListController::class, "show"]
-)->name("image_list");
+)->name("image_list")->middleware('auth');
 
 Route::get(
     '/detail',
     [App\Http\Controllers\ImageListController::class, "choice"]
-)->name("image_detail");
+)->name("image_detail")->middleware('auth');
 
 // Route::get('/image_detail/{id}', 'App\Http\Controllers\ImageListController@showDetail');
 

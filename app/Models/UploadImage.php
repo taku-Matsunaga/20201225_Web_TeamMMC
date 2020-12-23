@@ -10,5 +10,5 @@ class UploadImage extends Model
     use HasFactory;
 
     protected $table = "upload_image";
-    protected $fillable = ["file_name","file_path","file_title", "file_text", "file_size"];
+    protected $fillable = ["file_name","file_path","file_title", "file_text", "post_by", "file_size"];
 }

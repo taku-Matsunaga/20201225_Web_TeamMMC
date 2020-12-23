@@ -4,12 +4,16 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\UploadImage;
+use Illuminate\Support\Facades\Auth;
+
 
 
 class UploadImageController extends Controller
 {
     function show(){
-		return view("upload_form");
+        $user = Auth::user();
+
+		return view("upload_form", ['user' => $user]);
 	}
 
 	function upload(Request $request){
@@ -19,6 +23,7 @@ class UploadImageController extends Controller
         $upload_image = $request->file('image');
         $title = $request->input('title');
         $text = $request->input('text');
+        $postBy = $request->input('post_by');
         // $created = $request->timestamp();
 
 		if($upload_image) {
@@ -31,6 +36,7 @@ class UploadImageController extends Controller
 					"file_path" => $path,
 					"file_title" => $title,
 					"file_text" => $text,
+					"post_by" => $postBy,
 					// "created_at" => $created,
 				]);
 			}

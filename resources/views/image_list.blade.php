@@ -7,6 +7,10 @@
 <p>ログインしていません( <a href="http://localhost/20201225_Web_TeamMMC/public/login">ログイン</a>|<a href="http://localhost/20201225_Web_TeamMMC/public/register">登録</a>)</p>
 @endif
 
+<div>
+    <a href='http://localhost/20201225_Web_TeamMMC/public/home'>ユーザー管理</a>
+</div>
+
 <hr />
 
 @foreach($images as $image)
@@ -21,7 +25,7 @@
     exit(); ?> --}}
 
     {{-- <p>{{ $image->file_name }}</p> --}}
-    <p>{{ $image->file_title }}</p>
-    <p>{{ $image->file_text }}</p>
+    <p>{{ $image->file_title}}</p>
+    <p>{{ $image->post_by}}</p>
 </a>
 @endforeach
