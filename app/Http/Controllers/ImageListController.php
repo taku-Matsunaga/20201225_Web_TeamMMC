@@ -13,9 +13,10 @@ class ImageListController extends Controller
 		]);
     }
 
-   function choice(){
-		//アップロードした画像を取得
-		$uploads = UploadImage::where("id", 8)->get();
+   function choice(Request $request){
+		//アップロードしたRequestを取得
+		// $uploads = UploadImage::where("id", 8)->get();
+		$uploads = UploadImage::where("id", $request->id)->get();
 
 		return view("image_detail",[
 			"images" => $uploads

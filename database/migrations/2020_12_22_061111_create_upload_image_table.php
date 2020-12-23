@@ -15,7 +15,11 @@ class CreateUploadImageTable extends Migration
 			$table->id();
 			$table->string("file_name");
 			$table->string("file_path");
-           $table->timestamps();
+			$table->string("file_title");
+            $table->string("file_test");
+            $table->timestamp('created_at');
+            $table->timestamp('updated_at');
+        //    $table->timestamps();
        });
    }
    /**
