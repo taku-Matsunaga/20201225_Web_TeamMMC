@@ -38,6 +38,19 @@ Route::get(
     [App\Http\Controllers\ImageListController::class, "choice"]
 )->name("image_detail")->middleware('auth');
 
+Route::post(
+    '/upComment',
+    [App\Http\Controllers\ImageCommentController::class, "uploadComment"]
+)->name("upload_comment")->middleware('auth');
+
+// Route::post('upComment', 'App\Http\Controllers\ImageCommentController@uploadComment')->name("upload_comment")->middleware('auth');
+
+
+// Route::get(
+//     '/detail',
+//     [App\Http\Controllers\ImageCommentController::class, "index"]
+// )->name("image_detail")->middleware('auth');
+
 // Route::get('/image_detail/{id}', 'App\Http\Controllers\ImageListController@showDetail');
 
 Auth::routes();

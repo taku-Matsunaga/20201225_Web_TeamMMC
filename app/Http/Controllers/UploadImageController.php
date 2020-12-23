@@ -40,7 +40,10 @@ class UploadImageController extends Controller
 					// "created_at" => $created,
 				]);
 			}
-		}
+        }
+
+        // var_dump('test');
+        // exit();
 		return redirect("/list");
 	}
 }

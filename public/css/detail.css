@@ -1,0 +1,24 @@
+.container{
+    display: flex;
+}
+
+.container_box{
+    width: 50%;
+    margin: 16px;
+}
+
+.container_chat{
+    width: 50%;
+    height: 100vh;
+    background-color: aliceblue;
+}
+
+.inputBox{
+    height: 100px;
+    background-color: #eee7c2;
+    width: 100%;
+    right: 0;
+    bottom: 0;
+    position: sticky;
+
+    }
