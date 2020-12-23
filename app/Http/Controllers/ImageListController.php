@@ -2,15 +2,24 @@
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\UploadImage;
+use Illuminate\Support\Facades\Auth;
+
+
 class ImageListController extends Controller
 {
-   function show(){
-		//アップロードした画像を取得
-		$uploads = UploadImage::orderBy("id", "desc")->get();
+   function show(Request $request){
 
-		return view("image_list",[
-			"images" => $uploads
-		]);
+        $user = Auth::user();
+
+		//アップロードした画像を取得
+        $uploads = UploadImage::orderBy("id", "desc")->get();
+
+        $param = ['images' => $uploads, 'user' => $user];
+
+		return view("image_list",
+            // "images" => $uploads
+            $param
+		);
     }
 
    function choice(Request $request){

@@ -38,3 +38,7 @@ Route::get(
 )->name("image_detail");
 
 // Route::get('/image_detail/{id}', 'App\Http\Controllers\ImageListController@showDetail');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

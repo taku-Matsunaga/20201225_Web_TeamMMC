@@ -19,6 +19,7 @@ class UploadImageController extends Controller
         $upload_image = $request->file('image');
         $title = $request->input('title');
         $text = $request->input('text');
+        // $created = $request->timestamp();
 
 		if($upload_image) {
 			//アップロードされた画像を保存する
@@ -30,6 +31,7 @@ class UploadImageController extends Controller
 					"file_path" => $path,
 					"file_title" => $title,
 					"file_text" => $text,
+					// "created_at" => $created,
 				]);
 			}
 		}

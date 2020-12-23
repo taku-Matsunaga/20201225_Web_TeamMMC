@@ -1,5 +1,12 @@
 
 <a href="{{ route('upload_form') }}">Upload</a>
+
+@if (Auth::check())
+<p>USER: {{$user->name . '(' . $user->email . ')'}}</p>
+@else
+<p>ログインしていません( <a href="http://localhost/20201225_Web_TeamMMC/public/login">ログイン</a>|<a href="http://localhost/20201225_Web_TeamMMC/public/register">登録</a>)</p>
+@endif
+
 <hr />
 
 @foreach($images as $image)
