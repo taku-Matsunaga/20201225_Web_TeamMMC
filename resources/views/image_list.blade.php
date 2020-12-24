@@ -19,7 +19,7 @@
     <div class=header-wrapper>
 <table>
     <tr>
-        <th class="left"><p class="logo">OMOIDE</p></th>
+        <th class="left"><img src="css/rogo.png" alt="" class="rogo"></th>
         <th class="right">
             @if (Auth::check())
            <p id="username">ログインユーザー : {{$user->name}}</p>
@@ -28,6 +28,7 @@
             @endif
         </th>
         <th class="bt-box"><button><a href="{{ route('upload_form') }}">写真をUPする</a></button></th>
+        <th class="bt-box"><button><a href="http://localhost/20201225_Web_TeamMMC/LINEpay/sample/store.php">STORE</a></button></th>
         <th class="bt-box"><button><a href='http://localhost/20201225_Web_TeamMMC/public/home'>ユーザー管理</a></button></th>
     </tr>
     <tr>
