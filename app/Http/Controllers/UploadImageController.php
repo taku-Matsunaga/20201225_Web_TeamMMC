@@ -24,6 +24,7 @@ class UploadImageController extends Controller
         $title = $request->input('title');
         $text = $request->input('text');
         $postBy = $request->input('post_by');
+        $userId = $request->input('user_id');
         // $created = $request->timestamp();
 
 		if($upload_image) {
@@ -37,6 +38,7 @@ class UploadImageController extends Controller
 					"file_title" => $title,
 					"file_text" => $text,
 					"post_by" => $postBy,
+					"user_id" => $userId,
 					// "created_at" => $created,
 				]);
 			}

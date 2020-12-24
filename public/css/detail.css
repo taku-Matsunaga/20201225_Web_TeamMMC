@@ -1,24 +1,45 @@
-.container{
+.container {
     display: flex;
+    width: 100%
 }
 
-.container_box{
-    width: 50%;
+.container_box {
     margin: 16px;
 }
 
-.container_chat{
-    width: 50%;
-    height: 100vh;
-    background-color: aliceblue;
+.container_box img {
+    width: 100%;
 }
 
-.inputBox{
+.mainimg {
+    width: 100%;
+}
+
+.container_chat {
+    width: 40%;
+    height: 100vh;
+    background-color: aliceblue;
+    flex-direction: column;
+    overflow: auto;
+}
+
+.inputBox {
     height: 100px;
     background-color: #eee7c2;
     width: 100%;
     right: 0;
     bottom: 0;
     position: sticky;
+}
 
-    }
+.left {
+    width: 60%;
+}
+
+.comment{
+    margin: 10px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    word-wrap: break-word;
+}

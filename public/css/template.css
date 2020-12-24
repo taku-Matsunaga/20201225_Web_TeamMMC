@@ -1,0 +1,58 @@
+.container{
+display: flex;
+width: 100%;
+height: 100vh;
+background-image: url(付箋花.jpg);
+background-position: bottom;
+background-size: cover;
+color:#555;
+font-size: 18px;
+}
+
+.left{
+    width: 50%;
+}
+
+.container_box{
+    width: 100%;
+    background-color: cornsilk;
+}
+
+.mainimg{
+    width: 100%;
+}
+
+.container_chat{
+  width: 60%;
+  color:#555;
+  font-size: 18px;
+  text-align: center;
+  flex-direction: column;
+  overflow: auto;
+}
+
+.inputBox{
+    background-color: cornsilk;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    width: 100%;
+    }
+
+.comment{
+    width: 200px;
+    margin: 10px;
+    padding: 30px;
+    padding-top: 60px;
+    background-image: url(付箋.png);
+    background-size: cover;
+    word-wrap: break-word;
+}
+
+.container_chat ul{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.comment p{
+ white-space: pre-wrap;
+}

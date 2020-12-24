@@ -38,8 +38,20 @@ Route::get(
     [App\Http\Controllers\ImageListController::class, "choice"]
 )->name("image_detail")->middleware('auth');
 
+Route::get(
+    '/detail/del',
+    [App\Http\Controllers\ImageListController::class, "del"]
+)->middleware('auth');
+
+Route::post(
+    '/doneDelete',
+    [App\Http\Controllers\ImageListController::class, "remove"]
+)->middleware('auth');
+
 Route::post(
     '/upComment',
+    // var_dump('test'),
+    // exit(),
     [App\Http\Controllers\ImageCommentController::class, "uploadComment"]
 )->name("upload_comment")->middleware('auth');
 
