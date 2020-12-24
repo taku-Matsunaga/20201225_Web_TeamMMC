@@ -18,7 +18,7 @@ class CreateImageComments extends Migration
 			$table->string("user_id");
 			$table->string("detail_id");
 			$table->string("user_name");
-            $table->string("comment");
+            $table->text("comment");
             // $table->string("post_by");
             // $table->dateTime('created_at');
             // $table->dateTime('updated_at');

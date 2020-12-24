@@ -27,7 +27,8 @@ font-size: 18px;
   color:#555;
   font-size: 18px;
   text-align: center;
-
+  flex-direction: column;
+  overflow: auto;
 }
 
 .inputBox{
@@ -44,6 +45,7 @@ font-size: 18px;
     padding-top: 60px;
     background-image: url(付箋.png);
     background-size: cover;
+    word-wrap: break-word;
 }
 
 .container_chat ul{

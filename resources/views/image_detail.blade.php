@@ -33,8 +33,8 @@
 
 
                 </div>
-            @endforeach 
-            
+            @endforeach
+
             <form action="{{ route('upload_comment') }}" method="post" enctype="multipart/form-data">
                 @csrf
                 <div class="inputBox">
@@ -47,7 +47,7 @@
                     <input type="hidden" name="user_id" value="{{$users->id}}">
 
                     <input type="text" name="comment">
-                    
+
                      {{-- 記事のIDを取得する --}}
                     @foreach ($images as $image)
                     <input type="hidden" name="detail_id" value="{{$image->id}}">
@@ -72,8 +72,8 @@
             @foreach ($images as $image)
                 @if ($image->id == $item->detail_id)
                      <li class="comment">
-                     <p>{{$item->user_name}}</p>
-                        <p>{{$item->comment}}</p>
+                     <p class="name">名前 : {{$item->user_name}}</p>
+                     <p class="text">{{$item->comment}}</p>
 
                 {{-- <p>{{$item->comment}}</p> --}}
                       </li>
