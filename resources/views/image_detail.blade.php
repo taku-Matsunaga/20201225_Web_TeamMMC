@@ -14,7 +14,9 @@
 
     <div class="container">
         <div class="left">
+            @if ($users->hasTemp == 1)
             <button id="stylechange">テンプレート適用</button>
+            @endif
             <button><a href='{{ asset('/list') }}'>リストに戻る</a></button>
 
             @foreach($images as $image)
@@ -56,10 +58,9 @@
                 </div>
             </form>
 
-        <div>
+        <div class="delBtn">
             @foreach ($images as $image)
             @if ($image->user_id == $users->id)
-                <p>表示されてます</p>
                 <a href="{{ asset('/detail/del?id=' . $image->id) }}">投稿を削除する</a>
             @endif
             @endforeach

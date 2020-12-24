@@ -14,10 +14,14 @@
                         </div>
                     @endif
 
-                    {{ __('You are logged in!') }}
+                    {{-- {{ __('You are logged in!') }} --}}
+                    <a href='{{ asset('/list') }}'>アルバムを見る</a>
                 </div>
             </div>
         </div>
+    </div>
+    <div style="text-align: center">
+        <button><a href='{{ asset('/list') }}'>リストに戻る</a></button>
     </div>
 </div>
 @endsection
