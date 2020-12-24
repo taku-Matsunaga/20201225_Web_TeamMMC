@@ -35,7 +35,7 @@
                 <a href="{{ asset('/detail/del?id=' . $image->id) }}">投稿を削除する</a>
             @endif
         </div>
-        
+
     </div>
 @endforeach
 
@@ -43,18 +43,16 @@
     <div>
         <ul>
             @foreach ($items as $item)
-            <li>
+            @foreach ($images as $image)
+                @if ($image->id == $item->detail_id)
+                     <li>
+                     <p>{{$item->user_name}}</p>
+                        <p>{{$item->comment}}</p>
 
-                @foreach ($images as $image)
-                    @if ($image->id == $item->detail_id)
-                    <p>{{$item->user_name}}</p>
-                    <p>{{$item->comment}}</p>
-
-                    @endif
-
-                @endforeach
                 {{-- <p>{{$item->comment}}</p> --}}
-            </li>
+                      </li>
+            @endif
+        @endforeach
             @endforeach
         </ul>
     </div>
