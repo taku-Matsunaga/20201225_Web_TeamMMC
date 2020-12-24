@@ -14,7 +14,9 @@
 
     <div class="container">
         <div class="left">
+            @if ($users->hasTemp == 1)
             <button id="stylechange">テンプレート適用</button>
+            @endif
             <button><a href='{{ asset('/list') }}'>リストに戻る</a></button>
 
             @foreach($images as $image)
