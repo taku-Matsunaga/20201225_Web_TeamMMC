@@ -19,7 +19,7 @@
         <h1 class="store">Template store</h1>
         <img src="img/sample.jpg" alt="" class="sample">
         <div class="template">
-            <button class="LINEpaybtn"> <a href="">HOME</a></button>
+            <button class="LINEpaybtn"> <a href="http://localhost/20201225_Web_TeamMMC/public/list">HOME</a></button>
             <p class="msg">購入ありがとうございました。テンプレートをご利用頂けます</p>
         </div>
 

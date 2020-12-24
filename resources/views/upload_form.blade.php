@@ -29,6 +29,7 @@
 
 <img src="" id="preview" width="300px">
 
+
 <form
 method="post"
 action="{{ route('upload_image') }}"
@@ -37,6 +38,7 @@ enctype="multipart/form-data"
 @csrf
     <input type="hidden" name="post_by" value="{{$user->name}}">
     <input type="file" name="image" accept="image/png, image/jpeg" id="file1">
+
     <div>
         <p>タイトルを入力</p>
         <input type="text" name="title">

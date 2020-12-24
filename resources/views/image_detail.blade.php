@@ -15,11 +15,12 @@
     <div class="container">
         <div class="left">
             <button id="stylechange">テンプレート適用</button>
-            <button> <a href='http://localhost/20201225_Web_TeamMMC/public/list'>リストに戻る</a></button>
+            <button><a href='{{ asset('/list') }}'>リストに戻る</a></button>
 
             @foreach($images as $image)
                 <div  class="container_box">
                     <img src="{{ asset('/storage/' . $image->file_path) }}" class="mainimg">
+
 
                     {{-- 確認var_dump --}}
                     {{-- <?php var_dump('/storage/' . $image->file_path);
@@ -32,7 +33,9 @@
 
 
                 </div>
-            @endforeach <form action="{{ route('upload_comment') }}" method="post" enctype="multipart/form-data">
+            @endforeach 
+            
+            <form action="{{ route('upload_comment') }}" method="post" enctype="multipart/form-data">
                 @csrf
                 <div class="inputBox">
                     <p>ユーザー名 : {{$users->name}}</p>
@@ -44,37 +47,44 @@
                     <input type="hidden" name="user_id" value="{{$users->id}}">
 
                     <input type="text" name="comment">
-
-                    {{-- 記事のIDを取得する --}}
+                    
+                     {{-- 記事のIDを取得する --}}
                     @foreach ($images as $image)
                     <input type="hidden" name="detail_id" value="{{$image->id}}">
                     @endforeach
                     <input type="submit" value="コメントする">
                 </div>
             </form>
-        </div>
-    <div class="container_chat">
 
         <div>
-            <ul>
-                @foreach ($items as $item)
-                <li class="comment">
-
-                    @foreach ($images as $image)
-                        @if ($image->id == $item->detail_id)
-                        <p>{{$item->user_name}}</p>
-                        <p>{{$item->comment}}</p>
-
-                        @endif
-
-                    @endforeach
-                    {{-- <p>{{$item->comment}}</p> --}}
-                </li>
-                @endforeach
-            </ul>
+            @if ($image->user_id == $users->id)
+                <p>表示されてます</p>
+                <a href="{{ asset('/detail/del?id=' . $image->id) }}">投稿を削除する</a>
+            @endif
         </div>
 
     </div>
+
+<div class="container_chat">
+    <div>
+        <ul>
+            @foreach ($items as $item)
+            @foreach ($images as $image)
+                @if ($image->id == $item->detail_id)
+                     <li class="comment">
+                     <p>{{$item->user_name}}</p>
+                        <p>{{$item->comment}}</p>
+
+                {{-- <p>{{$item->comment}}</p> --}}
+                      </li>
+            @endif
+          @endforeach
+          @endforeach
+        </ul>
+    </div>
+
+
+        </div>
 </div>
 
 <script>

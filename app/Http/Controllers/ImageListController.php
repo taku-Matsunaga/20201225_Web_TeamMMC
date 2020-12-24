@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use App\Models\UploadImage;
 use App\Models\ImageComment;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 
 class ImageListController extends Controller
@@ -37,31 +38,27 @@ class ImageListController extends Controller
 		]);
     }
 
-    // function uploadComment(Request $request){
-    //     // $request->validate([
-	// 	// 	'image' => 'required|file|image|mimes:png,jpeg'
-	// 	// ]);
-    //     // $upload_image = $request->file('image');
+    public function del(Request $request)
+    {
+        // $param = ['id' => $request->id];
+        // $user = Auth::user();
+        // $image = DB::select('select * from upload_image where id = :id', $param);
+        // return view('image_detail_del', ['images' => $image, 'users' => $user]);
 
-    //     $user_id = $request->input('user_id');
-    //     $detail_id = $request->input('detail_id');
-    //     $user_name = $request->input('user_name');
-    //     $comment = $request->input('comment');
-    //     // $created = $request->timestamp();
+        $param = ['id' => $request->id];
+        $data = $request;
+        $user = Auth::user();
+        $image = DB::select('select * from upload_image where id = :id', $param);
+        return view('image_detail_del', ['images' => $image, 'users' => $user, 'data' => $data]);
+    }
 
-	// 	if($comment) {
-	// 		//アップロードされた画像を保存する
-	// 		// $path = $upload_image->store('uploads',"public");
-	// 		//画像の保存に成功したらDBに記録する
-	// 			ImageComment::create([
-	// 				"user_id" => $user_id,
-	// 				"detail_id" => $detail_id,
-	// 				"user_name" => $user_name,
-	// 				"comment" => $comment,
-	// 				// "created_at" => $created,
-	// 			]);
-	// 	}
-	// 	return redirect("/list");
-	// }
+    public function remove(Request $request)
+    {
+        $param = ['id' => $request->get('detail_id')];
+        // var_dump($param);
+        // exit();
+        DB::delete('delete from upload_image where id = :id', $param);
+        return redirect('/list');
+    }
 
 }
