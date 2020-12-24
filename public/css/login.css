@@ -1,0 +1,41 @@
+
+body{
+    font-size: 14px;
+    line-height: 18px;
+    background-image: url(../img/805888_s.jpg);
+    back-ground-size:100%
+}
+
+.logo{
+    font-size: 40px;
+    letter-spacing: 5px;
+    font-weight: bold;
+    color: black;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+
+.left{
+text-align: left;
+width:50%
+}
+
+.right
+{
+text-align: right;
+width:50%;
+}
+
+/* td{
+    width:50%;
+} */
+
+button{
+    width:110px;
+    height:30px;
+    margin: 20px;
+    font-size: 14px;
+}
+
+/* ここまで共通CSS */

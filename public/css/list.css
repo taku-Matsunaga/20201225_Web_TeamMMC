@@ -1,0 +1,81 @@
+.header-wrapper{
+width: 100%;
+height:60px;
+padding: 20 10 20 10px;
+margin:0;
+background-color: black;
+}
+
+body{
+    font-size: 14px;
+    line-height: 18px;
+    background-image: url(../img/2332973_m.jpg);
+    back-ground-size:100%
+}
+
+.logo{
+    font-size: 40px;
+    letter-spacing: 5px;
+    font-weight: bold;
+    color: white;
+    margin:10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+
+.left{
+text-align: left;
+width:50%
+}
+
+.right
+{
+text-align: right;
+width:50%;
+}
+
+/* td{
+    width:50%;
+} */
+
+button{
+    width:110px;
+    height:30px;
+    margin: 20px;
+}
+
+.all-box{
+    /* この要素はflexコンテナとなり、子要素は自動的にflexアイテムとなる */
+  display: flex;
+  /* 横並びに表示する */
+  flex-direction: row;
+  /* 画面幅に収まらない場合は折り返す */
+  flex-wrap: wrap;
+}
+
+.bt-box{
+margin-left: 10px;
+}
+
+/* ポラロイド風の枠 */
+#polaroid {
+  background: #fff;
+  margin: 10px auto 40px auto;
+  width: 324px;
+  height:400px;
+  box-shadow:0 0 2px rgb(119, 118, 118);
+}
+#polaroid img {
+  border: solid 1px #ddd;
+  margin: 18px;
+}
+#polaroid p {
+  font-size: 14px;
+  text-align: center;
+}
+/* ここまで */
+#username{
+color:white;
+font-size: 12px;
+}

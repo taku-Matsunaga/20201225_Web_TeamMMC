@@ -18,6 +18,9 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/login.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/register.css') }}" rel="stylesheet">
+
 </head>
 <body>
     <div id="app">
@@ -25,7 +28,7 @@
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/list') }}">
                     {{-- {{ config('app.name', 'Laravel') }} --}}
-                    OMOIDE
+                   <p class="logo">Omoide</p>
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -43,13 +46,13 @@
                         @guest
                             @if (Route::has('login'))
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                    <a class="nav-link" href="{{ route('login') }}">{{ __('ログイン') }}</a>
                                 </li>
                             @endif
 
                             @if (Route::has('register'))
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                    <a class="nav-link" href="{{ route('register') }}">{{ __('会員登録') }}</a>
                                 </li>
                             @endif
                         @else
