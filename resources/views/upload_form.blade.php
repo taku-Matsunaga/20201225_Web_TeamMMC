@@ -7,7 +7,7 @@
      <link rel="icon" href="rogo.ico">
     <title>omoide</title>
     <link href="{{ asset('css/reset.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/detail.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/list.css') }}" rel="stylesheet">
 </head>
 <body>
 
@@ -25,11 +25,28 @@
 </div>
 @endif
 
-<p>投稿者名: {{$user->name}}</p>
+  <div class=header-wrapper>
+<table>
+    <tr>
+        <th class="left"><a href="http://localhost/20201225_Web_TeamMMC/public/list"><img src="css/rogo.png" alt="" class="rogo"></a></th>
+        <th class="right">
+            @if (Auth::check())
+           <p id="username">ログインユーザー : {{$user->name}}</p>
+            @else
+            <p>ログインしていません( <a href="http://localhost/20201225_Web_TeamMMC/public/login">ログイン</a>|<a href="http://localhost/20201225_Web_TeamMMC/public/register">登録</a>)</p>
+            @endif
+        </th>
+        <th class="bt-box"><button><a href="http://localhost/20201225_Web_TeamMMC/public/list">リスト</a></button></th>
+        <th class="bt-box"><button><a href="http://localhost/20201225_Web_TeamMMC/LINEpay/sample/store.php">STORE</a></button></th>
+        <th class="bt-box"><button><a href='http://localhost/20201225_Web_TeamMMC/public/home'>ユーザー管理</a></button></th>
+    </tr>
+    <tr>
 
-<img src="" id="preview" width="300px">
-
-
+    </tr>
+</table>
+</div>
+<div class="polaroid_detail">
+<img src="" id="preview"  class="preview_img" >
 <form
 method="post"
 action="{{ route('upload_image') }}"
@@ -49,8 +66,10 @@ enctype="multipart/form-data"
         <input type="text" name="text">
     </div>
     <input type="submit" value="Upload">
-    <button><a href="">Cancel</a></button>
+    <a href='{{ asset('/list') }}' class="cancel">Cancel</a>
 </form>
+</div>
+
 
 <script>
     // プレビュー
