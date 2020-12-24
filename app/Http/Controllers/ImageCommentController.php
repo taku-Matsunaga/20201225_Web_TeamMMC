@@ -49,6 +49,6 @@ class ImageCommentController extends Controller
 					// "created_at" => $created,
 				]);
 		}
-		return redirect("/list");
+		return redirect("/detail?id={$detail_id}");
 	}
 }

@@ -79,3 +79,13 @@ margin-left: 10px;
 color:white;
 font-size: 12px;
 }
+
+.listTitle{
+    font-weight: bold;
+    color: darkslategray;
+}
+
+.listPost{
+margin: 10px;
+color: darkslategray;
+}

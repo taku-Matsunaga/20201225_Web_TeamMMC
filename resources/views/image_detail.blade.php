@@ -27,9 +27,9 @@
                     exit(); ?> --}}
 
                     {{-- <p>{{ $image->file_name }}</p> --}}
-                    <p>{{ $image->post_by }}</p>
-                    <p>{{ $image->file_title }}</p>
-                    <p>{{ $image->file_text }}</p>
+                    <p class="postBy">投稿者 : {{ $image->post_by }}</p>
+                    <p class="postTitle">タイトル : {{ $image->file_title }}</p>
+                    <p class="postText">{{ $image->file_text }}</p>
 
 
                 </div>
@@ -38,7 +38,7 @@
             <form action="{{ route('upload_comment') }}" method="post" enctype="multipart/form-data">
                 @csrf
                 <div class="inputBox">
-                    <p>ユーザー名 : {{$users->name}}</p>
+                    <p class="inputName">ユーザー名 : {{$users->name}}</p>
 
                     {{-- usersテーブルのuser_nameを取得 --}}
                     <input type="hidden" name="user_name" value="{{$users->name}}">
@@ -46,7 +46,7 @@
                     {{-- usersテーブルのuser_idを取得 --}}
                     <input type="hidden" name="user_id" value="{{$users->id}}">
 
-                    <input type="text" name="comment">
+                    <input type="text" class="inputComment" name="comment">
 
                      {{-- 記事のIDを取得する --}}
                     @foreach ($images as $image)
@@ -57,10 +57,12 @@
             </form>
 
         <div>
+            @foreach ($images as $image)
             @if ($image->user_id == $users->id)
                 <p>表示されてます</p>
                 <a href="{{ asset('/detail/del?id=' . $image->id) }}">投稿を削除する</a>
             @endif
+            @endforeach
         </div>
 
     </div>

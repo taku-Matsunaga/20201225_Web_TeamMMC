@@ -5,6 +5,11 @@
 
 .container_box {
     margin: 16px;
+    text-align: center;
+}
+
+.container_box p{
+    margin: 20px;
 }
 
 .container_box img {
@@ -12,7 +17,7 @@
 }
 
 .mainimg {
-    width: 100%;
+    max-width: 600px;
 }
 
 .container_chat {
@@ -24,12 +29,15 @@
 }
 
 .inputBox {
-    height: 100px;
+    height: 100%;
     background-color: #eee7c2;
     width: 100%;
     right: 0;
     bottom: 0;
     position: sticky;
+    text-align: center;
+    padding-bottom: 20px;
+    box-sizing: border-box;
 }
 
 .left {
@@ -42,4 +50,35 @@
     padding: 10px;
     border-radius: 10px;
     word-wrap: break-word;
+}
+
+.postBy{
+    font-weight: bold;
+}
+
+.postTitle{
+    background-color: beige;
+    padding: 20px 0;
+    font-weight: bold;
+}
+
+.postText{
+    padding: 20px 0;
+    border: 1px solid #777;
+}
+
+.name{
+    margin: 6px 0;
+    font-weight: bold;
+    color: darkslategray;
+}
+
+.inputName{
+    padding: 20px 0;
+    font-weight: bold;
+}
+
+.inputComment{
+    width: 500px;
+    height: 50px;
 }

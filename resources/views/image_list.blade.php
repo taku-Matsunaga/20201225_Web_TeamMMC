@@ -22,7 +22,7 @@
         <th class="left"><p class="logo">OMOIDE</p></th>
         <th class="right">
             @if (Auth::check())
-           <p id="username">USER: {{$user->name . '(' . $user->email . ')'}}</p>
+           <p id="username">ログインユーザー : {{$user->name}}</p>
             @else
             <p>ログインしていません( <a href="http://localhost/20201225_Web_TeamMMC/public/login">ログイン</a>|<a href="http://localhost/20201225_Web_TeamMMC/public/register">登録</a>)</p>
             @endif
@@ -55,8 +55,8 @@
     </div>
     <div class="polaroid_p">
         {{-- <p>{{ $image->file_name }}</p> --}}
-        <p>{{ $image->file_title}}</p>
-        <p>{{ $image->post_by}}</p>
+        <p class="listTitle">{{ $image->file_title}}</p>
+        <p class="listPost">投稿者 : {{ $image->post_by}}</p>
     </div>
 </a>
 @endforeach

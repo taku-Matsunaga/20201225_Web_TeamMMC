@@ -16,10 +16,16 @@ font-size: 18px;
 .container_box{
     width: 100%;
     background-color: cornsilk;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.container_box p{
+    margin: 20px;
 }
 
 .mainimg{
-    width: 100%;
+    max-width: 600px;
 }
 
 .container_chat{
@@ -36,6 +42,9 @@ font-size: 18px;
     padding-top: 30px;
     padding-bottom: 30px;
     width: 100%;
+    text-align: center;
+    padding-bottom: 20px;
+    box-sizing: border-box;
     }
 
 .comment{
@@ -55,4 +64,35 @@ font-size: 18px;
 
 .comment p{
  white-space: pre-wrap;
+}
+
+.postBy{
+    font-weight: bold;
+}
+
+.postTitle{
+    background-color: beige;
+    padding: 20px 0;
+    font-weight: bold;
+}
+
+.postText{
+    padding: 20px 0;
+    border: 1px solid #777;
+}
+
+.name{
+    margin: 6px 0;
+    font-weight: bold;
+    color: darkslategray;
+}
+
+.inputName{
+    padding: 20px 0;
+    font-weight: bold;
+}
+
+.inputComment{
+    width: 500px;
+    height: 50px;
 }
