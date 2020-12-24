@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="icon" href="rogo.ico
-    
+    <link rel="icon" href="rogo.ico">
+
     <title>Omoide</title>
-    
+
     <link href="{{ asset('css/reset.css') }}" rel="stylesheet">
     <link href="{{ asset('css/list.css') }}" rel="stylesheet">
     <title>Document</title>
@@ -49,27 +49,16 @@
 
 @foreach($images as $image)
 {{-- ポラロイド風の枠 --}}
-<div id="polaroid">
-    <div class="polaroid img">
-<a href="{{ asset('/detail?id=' . $image->id) }}" style="width: 18rem; float:left;">
-    <img src="{{ asset('/storage/' . $image->file_path) }}" style="width:100%;"/>
-
-    {{-- 確認var_dump --}}
-    {{-- <?php var_dump('/storage/' . $image->file_path);
-    exit(); ?> --}}
-    <br>
-    {{-- 確認var_dump --}}
-    {{-- <?php var_dump($image->id);
-    exit(); ?> --}}
-    <br>
+<a href="{{ asset('/detail?id=' . $image->id) }}" class="polaroid">
+    <div class="polaroid_img">
+        <img src="{{ asset('/storage/' . $image->file_path) }}" style="width:100%;"/>
     </div>
-<div id="polaroid p">
-    {{-- <p>{{ $image->file_name }}</p> --}}
-    <p>{{ $image->file_title}}</p>
-    <p>{{ $image->post_by}}</p>
+    <div class="polaroid_p">
+        {{-- <p>{{ $image->file_name }}</p> --}}
+        <p>{{ $image->file_title}}</p>
+        <p>{{ $image->post_by}}</p>
+    </div>
 </a>
-</div>
-</div>
 @endforeach
 
 </div>

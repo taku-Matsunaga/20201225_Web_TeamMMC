@@ -10,7 +10,7 @@ body{
     font-size: 14px;
     line-height: 18px;
     background-image: url(../img/2332973_m.jpg);
-    back-ground-size:100%
+    background-size:100%
 }
 
 .logo{
@@ -59,18 +59,18 @@ margin-left: 10px;
 }
 
 /* ポラロイド風の枠 */
-#polaroid {
+.polaroid {
   background: #fff;
   margin: 10px auto 40px auto;
   width: 324px;
   height:400px;
   box-shadow:0 0 2px rgb(119, 118, 118);
 }
-#polaroid img {
+.polaroid_img {
   border: solid 1px #ddd;
   margin: 18px;
 }
-#polaroid p {
+.polaroid_p {
   font-size: 14px;
   text-align: center;
 }
