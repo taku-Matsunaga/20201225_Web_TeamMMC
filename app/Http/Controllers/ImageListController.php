@@ -18,6 +18,11 @@ class ImageListController extends Controller
 
         $param = ['images' => $uploads, 'user' => $user];
 
+        setcookie('user_id', $user->id, (time()+1800), "/");
+        // session(['user_id' => $user->id]);
+        // var_dump($_COOKIE['user_id']);
+        // exit();
+
 		return view("image_list",
             // "images" => $uploads
             $param

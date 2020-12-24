@@ -19,5 +19,8 @@
             </div>
         </div>
     </div>
+    <div style="text-align: center">
+        <button><a href='{{ asset('/list') }}'>リストに戻る</a></button>
+    </div>
 </div>
 @endsection
