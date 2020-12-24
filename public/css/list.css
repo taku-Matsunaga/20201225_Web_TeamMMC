@@ -9,8 +9,8 @@ background-color: black;
 body{
     font-size: 14px;
     line-height: 18px;
-    background-image: url(../img/2332973_m.jpg);
-    background-size:100%
+    background-image: url(../img/background.jpeg);
+    background-size:100%;
 }
 
 .logo{
@@ -29,7 +29,11 @@ text-align: left;
 width:50%
 }
 
-.rogo{
+/* .rogo{
+    width: 150px;
+} */
+
+.logoSize{
     width: 150px;
 }
 
