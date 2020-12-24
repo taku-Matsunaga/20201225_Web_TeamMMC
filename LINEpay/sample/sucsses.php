@@ -29,7 +29,7 @@ $userId = $_COOKIE['user_id'];
 // idを指定して更新するSQLを作成（UPDATE文）
 $sql = "UPDATE users SET hasTemp = 1 WHERE id=$userId";
 $stmt = $pdo->prepare($sql);
-$stmt->execute($params);
+// $stmt->execute($params);
 
 ?>
 

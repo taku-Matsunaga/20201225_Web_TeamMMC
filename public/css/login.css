@@ -41,3 +41,8 @@ button{
 }
 
 /* ここまで共通CSS */
+
+/* homeのボタン */
+.albumBtn{
+    width: 200px;
+}

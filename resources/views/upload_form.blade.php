@@ -28,7 +28,7 @@
   <div class=header-wrapper>
 <table>
     <tr>
-        <th class="left"><a href="http://localhost/20201225_Web_TeamMMC/public/list"><img src="css/rogo.png" alt="" class="rogo"></a></th>
+        <th class="left"><a href="http://localhost/20201225_Web_TeamMMC/public/list"><img src="css/rogo.png" alt="" class="logoSize"></a></th>
         <th class="right">
             @if (Auth::check())
            <p id="username">ログインユーザー : {{$user->name}}</p>

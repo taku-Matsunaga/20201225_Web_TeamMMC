@@ -21,7 +21,7 @@
         </div>
     </div>
     <div style="text-align: center">
-        <button><a href='{{ asset('/list') }}'>リストに戻る</a></button>
+        <button class="albumBtn"><a href='{{ asset('/list') }}'>アルバムを見る</a></button>
     </div>
 </div>
 @endsection
