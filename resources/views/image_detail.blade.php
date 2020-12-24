@@ -58,10 +58,9 @@
                 </div>
             </form>
 
-        <div>
+        <div class="delBtn">
             @foreach ($images as $image)
             @if ($image->user_id == $users->id)
-                <p>表示されてます</p>
                 <a href="{{ asset('/detail/del?id=' . $image->id) }}">投稿を削除する</a>
             @endif
             @endforeach
