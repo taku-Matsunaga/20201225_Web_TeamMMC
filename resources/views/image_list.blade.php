@@ -10,7 +10,6 @@
 
     <link href="{{ asset('css/reset.css') }}" rel="stylesheet">
     <link href="{{ asset('css/list.css') }}" rel="stylesheet">
-    <title>Document</title>
 
 
 </head>

@@ -8,7 +8,7 @@ background-color: black;
 body{
     font-size: 14px;
     line-height: 18px;
-    background-image: url(../img/2332973_m.jpg);
+    background-image: url(../img/4.jpeg);
     background-size:100%
 }
 
@@ -21,7 +21,15 @@ body{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-
+.cancel{
+    background-color: #efefef;
+    border: solid;
+    border-width: 1px;
+    border-color: #767676;
+    border-radius: 2px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
 
 .left{
 text-align: left;
@@ -69,6 +77,20 @@ margin-left: 10px;
   height:400px;
   box-shadow:0 0 2px rgb(119, 118, 118);
 }
+.polaroid_detail{
+  background: #fff;
+  margin: auto;
+  width: 30%;
+  box-shadow:0 0 2px rgb(119, 118, 118);
+  text-align: center;
+}
+
+.preview_img{
+  box-sizing: border-box;
+  padding: 5px;
+  width: 100%;
+}
+
 .polaroid_img {
   border: solid 1px #ddd;
   margin: 18px;
