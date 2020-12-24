@@ -16,8 +16,9 @@
         <img src="{{ asset('/storage/' . $image->file_path) }}" style="width:100%;"/>
 
         {{-- 確認var_dump --}}
-        {{-- <?php var_dump('/storage/' . $image->file_path);
-        exit(); ?> --}}
+        {{-- <?php var_dump($image->user_id);
+        exit();
+        ?> --}}
 
         {{-- <p>{{ $image->file_name }}</p> --}}
         <p>{{ $image->post_by }}</p>
@@ -25,8 +26,16 @@
         <p>{{ $image->file_text }}</p>
 
         <div>
-            <a href='http://localhost/20201225_Web_TeamMMC/public/list'>リストに戻る</a>
+            {{-- <a href='http://localhost/20201225_Web_TeamMMC/public/list'>リストに戻る</a> --}}
+            <a href='{{ asset('/list') }}'>リストに戻る</a>
         </div>
+        <div>
+            @if ($image->user_id == $users->id)
+                <p>表示されてます</p>
+                <a href="{{ asset('/detail/del?id=' . $image->id) }}">投稿を削除する</a>
+            @endif
+        </div>
+        
     </div>
 @endforeach
 

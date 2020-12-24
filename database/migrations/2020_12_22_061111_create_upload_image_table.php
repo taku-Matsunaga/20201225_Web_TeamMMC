@@ -18,6 +18,7 @@ class CreateUploadImageTable extends Migration
 			$table->text("file_title");
             $table->text("file_text");
             $table->string("post_by");
+            $table->int("user_id");
             $table->dateTime('created_at');
             $table->dateTime('updated_at');
         //    $table->timestamps();
